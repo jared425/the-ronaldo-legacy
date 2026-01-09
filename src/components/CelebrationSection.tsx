@@ -23,9 +23,9 @@ const CelebrationSection = () => {
           className="absolute inset-0"
           animate={isAnimating ? {
             background: [
-              'radial-gradient(ellipse at center, hsl(43 100% 50% / 0.1) 0%, transparent 70%)',
-              'radial-gradient(ellipse at center, hsl(43 100% 50% / 0.3) 0%, transparent 70%)',
-              'radial-gradient(ellipse at center, hsl(43 100% 50% / 0.1) 0%, transparent 70%)',
+              'radial-gradient(ellipse at center, hsl(200 100% 50% / 0.1) 0%, transparent 70%)',
+              'radial-gradient(ellipse at center, hsl(200 100% 50% / 0.3) 0%, transparent 70%)',
+              'radial-gradient(ellipse at center, hsl(200 100% 50% / 0.1) 0%, transparent 70%)',
             ],
           } : {}}
           transition={{ duration: 2, repeat: isAnimating ? Infinity : 0 }}
@@ -38,7 +38,7 @@ const CelebrationSection = () => {
           {[...Array(8)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-[150%] bg-gradient-to-b from-primary/40 to-transparent origin-top"
+              className="absolute w-1 h-[150%] bg-gradient-to-b from-sky-400/40 to-transparent origin-top"
               style={{
                 left: `${10 + i * 12}%`,
                 top: 0,
@@ -64,35 +64,34 @@ const CelebrationSection = () => {
             The Iconic Celebration
           </span>
 
-          {/* SIUUU Title */}
+          {/* Arms to Sky Title */}
           <motion.h2
-            className="section-title text-6xl md:text-8xl lg:text-[150px] mt-4 mb-8"
+            className="section-title text-6xl md:text-8xl lg:text-[120px] mt-4 mb-8"
             animate={isAnimating ? {
               scale: [1, 1.1, 1],
               textShadow: [
-                '0 0 20px hsl(43 100% 50% / 0.5)',
-                '0 0 60px hsl(43 100% 50% / 0.9)',
-                '0 0 20px hsl(43 100% 50% / 0.5)',
+                '0 0 20px hsl(200 100% 50% / 0.5)',
+                '0 0 60px hsl(200 100% 50% / 0.9)',
+                '0 0 20px hsl(200 100% 50% / 0.5)',
               ],
             } : {}}
             transition={{ duration: 0.5, repeat: isAnimating ? 3 : 0 }}
           >
-            <span className="text-gradient-gold animate-glow">SIUUUU!</span>
+            <span className="text-gradient-gold animate-glow">¡VAMOS!</span>
           </motion.h2>
 
-          {/* Interactive celebration pose */}
+          {/* Interactive celebration pose - Messi's iconic pointing to sky */}
           <motion.div
             className="relative inline-block cursor-pointer select-none"
             onClick={triggerCelebration}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            {/* Silhouette figure */}
+            {/* Silhouette figure - Messi's signature arms up */}
             <motion.div
               className="relative"
               animate={isAnimating ? {
-                y: [0, -50, 0],
-                rotate: [0, -5, 5, 0],
+                y: [0, -30, 0],
               } : {}}
               transition={{ duration: 0.8, repeat: isAnimating ? 2 : 0 }}
             >
@@ -104,35 +103,29 @@ const CelebrationSection = () => {
                   animate={isAnimating ? { scale: [1, 1.1, 1] } : {}}
                 />
                 
-                {/* Arms raised in V */}
+                {/* Arms pointing up to sky */}
                 <div className="flex justify-center -mt-2">
                   <motion.div
-                    className="w-4 h-32 md:h-40 bg-primary rounded-full origin-bottom"
-                    style={{ transform: 'rotate(-30deg) translateX(-10px)' }}
-                    animate={isAnimating ? { rotate: [-30, -45, -30] } : { rotate: -30 }}
+                    className="w-4 h-36 md:h-44 bg-primary rounded-full origin-bottom"
+                    style={{ transform: 'rotate(-15deg) translateX(-20px)' }}
+                    animate={isAnimating ? { rotate: [-15, -5, -15] } : { rotate: -15 }}
                     transition={{ duration: 0.4, repeat: isAnimating ? 5 : 0 }}
                   />
                   <motion.div
-                    className="w-4 h-32 md:h-40 bg-primary rounded-full origin-bottom"
-                    style={{ transform: 'rotate(30deg) translateX(10px)' }}
-                    animate={isAnimating ? { rotate: [30, 45, 30] } : { rotate: 30 }}
+                    className="w-4 h-36 md:h-44 bg-primary rounded-full origin-bottom"
+                    style={{ transform: 'rotate(15deg) translateX(20px)' }}
+                    animate={isAnimating ? { rotate: [15, 5, 15] } : { rotate: 15 }}
                     transition={{ duration: 0.4, repeat: isAnimating ? 5 : 0 }}
                   />
                 </div>
 
                 {/* Torso */}
-                <div className="w-20 h-28 md:w-24 md:h-32 bg-primary rounded-lg -mt-28" />
+                <div className="w-20 h-28 md:w-24 md:h-32 bg-primary rounded-lg -mt-32" />
                 
                 {/* Legs */}
                 <div className="flex gap-3 -mt-2">
-                  <motion.div
-                    className="w-4 h-36 md:h-44 bg-primary rounded-full origin-top"
-                    animate={isAnimating ? { rotate: [-10, 0, -10] } : { rotate: -10 }}
-                  />
-                  <motion.div
-                    className="w-4 h-36 md:h-44 bg-primary rounded-full origin-top"
-                    animate={isAnimating ? { rotate: [10, 0, 10] } : { rotate: 10 }}
-                  />
+                  <div className="w-4 h-36 md:h-44 bg-primary rounded-full" />
+                  <div className="w-4 h-36 md:h-44 bg-primary rounded-full" />
                 </div>
               </div>
 
@@ -167,11 +160,11 @@ const CelebrationSection = () => {
               <VolumeX className="w-5 h-5" />
             )}
             <span className="text-sm">
-              {isAnimating ? 'Crowd goes wild!' : 'Stadium awaits...'}
+              {isAnimating ? 'The stadium erupts!' : 'Stadium awaits...'}
             </span>
           </motion.div>
 
-          {/* Floating particles during celebration */}
+          {/* Floating particles during celebration - Argentina colors */}
           {isAnimating && (
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
               {[...Array(20)].map((_, i) => (
@@ -179,7 +172,7 @@ const CelebrationSection = () => {
                   key={i}
                   className="absolute w-2 h-2 rounded-full"
                   style={{
-                    backgroundColor: i % 2 === 0 ? 'hsl(43 100% 50%)' : 'hsl(0 0% 100%)',
+                    backgroundColor: i % 2 === 0 ? 'hsl(200 100% 50%)' : 'hsl(0 0% 100%)',
                     left: `${Math.random() * 100}%`,
                     top: '100%',
                   }}

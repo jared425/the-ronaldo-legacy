@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDown, Play, BarChart3 } from 'lucide-react';
-import heroImage from '@/assets/hero-ronaldo.jpg';
+import heroImage from '@/assets/hero-messi.jpg';
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Cristiano Ronaldo celebration"
+          alt="Lionel Messi celebration"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
@@ -54,13 +54,13 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            The Legend • The Icon • The Greatest
+            The Magician • The Genius • The Greatest
           </motion.p>
 
           {/* Main Title */}
           <h1 className="section-title text-5xl md:text-7xl lg:text-9xl mb-6 text-shadow-hero">
             <span className="block">THE GOAT</span>
-            <span className="block text-gradient-gold animate-glow">CRISTIANO RONALDO</span>
+            <span className="block text-gradient-gold animate-glow">LIONEL MESSI</span>
           </h1>
 
           {/* Subtitle */}
@@ -70,7 +70,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            From Madeira to Immortality
+            From Rosario to World Cup Glory
           </motion.p>
 
           {/* CTA Buttons */}

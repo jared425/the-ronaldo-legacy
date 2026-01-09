@@ -2,12 +2,11 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const clubColors = [
-  { name: 'Sporting CP', color: 'hsl(145 80% 35%)' },
-  { name: 'Man United', color: 'hsl(0 100% 45%)' },
-  { name: 'Real Madrid', color: 'hsl(0 0% 100%)' },
-  { name: 'Juventus', color: 'hsl(0 0% 90%)' },
-  { name: 'Al Nassr', color: 'hsl(50 100% 50%)' },
-  { name: 'Portugal', color: 'hsl(0 100% 40%)' },
+  { name: 'Newell\'s Old Boys', color: 'hsl(0 100% 40%)' },
+  { name: 'Barcelona', color: 'hsl(240 100% 35%)' },
+  { name: 'Paris Saint-Germain', color: 'hsl(220 100% 30%)' },
+  { name: 'Inter Miami', color: 'hsl(330 100% 50%)' },
+  { name: 'Argentina', color: 'hsl(200 100% 50%)' },
 ];
 
 interface LoaderProps {
@@ -48,7 +47,7 @@ const Loader = ({ onComplete }: LoaderProps) => {
         exit={{ opacity: 0 }}
         className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background"
       >
-        {/* Animated Number 7 */}
+        {/* Animated Number 10 */}
         <motion.div
           className="relative"
           initial={{ scale: 0.8, opacity: 0 }}
@@ -56,14 +55,14 @@ const Loader = ({ onComplete }: LoaderProps) => {
           transition={{ duration: 0.5 }}
         >
           <motion.span
-            className="text-[200px] md:text-[300px] font-display font-bold leading-none"
+            className="text-[150px] md:text-[250px] font-display font-bold leading-none"
             style={{ color: clubColors[colorIndex].color }}
             animate={{
               textShadow: `0 0 60px ${clubColors[colorIndex].color}`,
             }}
             transition={{ duration: 0.3 }}
           >
-            7
+            10
           </motion.span>
           
           {/* Glow effect */}
@@ -93,14 +92,14 @@ const Loader = ({ onComplete }: LoaderProps) => {
           />
         </div>
 
-        {/* CR7 text */}
+        {/* Leo text */}
         <motion.p
           className="mt-8 font-display text-sm uppercase tracking-[0.5em] text-gradient-gold"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          CR7 Legacy
+          Leo Messi
         </motion.p>
       </motion.div>
     </AnimatePresence>

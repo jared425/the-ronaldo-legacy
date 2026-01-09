@@ -18,95 +18,71 @@ interface ClubData {
 
 const clubs: ClubData[] = [
   {
-    id: 'sporting',
-    name: 'Sporting CP',
-    years: '2002–2003',
-    matches: 31,
-    goals: 5,
-    assists: 6,
+    id: 'newells',
+    name: "Newell's Old Boys",
+    years: '1995–2000',
+    matches: 0,
+    goals: 500,
+    assists: 0,
     trophies: 0,
-    color: 'hsl(145 80% 35%)',
-    bgGradient: 'from-green-900/40 to-green-950/40',
-    highlights: ['Professional debut at 17', 'Impressed Sir Alex Ferguson', 'Youth academy product'],
-  },
-  {
-    id: 'manutd1',
-    name: 'Manchester United',
-    years: '2003–2009',
-    matches: 292,
-    goals: 118,
-    assists: 69,
-    trophies: 10,
-    color: 'hsl(0 100% 45%)',
-    bgGradient: 'from-red-900/40 to-red-950/40',
-    highlights: ['First Ballon d\'Or (2008)', 'Champions League winner', '3x Premier League champion'],
-  },
-  {
-    id: 'real',
-    name: 'Real Madrid',
-    years: '2009–2018',
-    matches: 438,
-    goals: 450,
-    assists: 131,
-    trophies: 16,
-    color: 'hsl(0 0% 95%)',
-    bgGradient: 'from-slate-800/40 to-slate-900/40',
-    highlights: ['4x Champions League winner', 'All-time top scorer', '4x Ballon d\'Or winner'],
-  },
-  {
-    id: 'juventus',
-    name: 'Juventus',
-    years: '2018–2021',
-    matches: 134,
-    goals: 101,
-    assists: 22,
-    trophies: 5,
-    color: 'hsl(0 0% 90%)',
-    bgGradient: 'from-zinc-800/40 to-zinc-900/40',
-    highlights: ['2x Serie A champion', 'Serie A Best Player', '100+ goals in 3 leagues'],
-  },
-  {
-    id: 'manutd2',
-    name: 'Manchester United',
-    years: '2021–2022',
-    matches: 54,
-    goals: 27,
-    assists: 5,
-    trophies: 0,
-    color: 'hsl(0 100% 45%)',
-    bgGradient: 'from-red-900/40 to-red-950/40',
-    highlights: ['Heroic return', 'Premier League hat-tricks', 'UCL knockout goals'],
-  },
-  {
-    id: 'alnassr',
-    name: 'Al Nassr',
-    years: '2023–Present',
-    matches: 89,
-    goals: 76,
-    assists: 18,
-    trophies: 1,
-    color: 'hsl(50 100% 50%)',
-    bgGradient: 'from-yellow-900/40 to-amber-950/40',
-    highlights: ['Saudi Pro League star', 'Record-breaking contract', 'Global ambassador'],
-  },
-  {
-    id: 'portugal',
-    name: 'Portugal',
-    years: '2003–Present',
-    matches: 217,
-    goals: 135,
-    assists: 48,
-    trophies: 2,
     color: 'hsl(0 100% 40%)',
-    bgGradient: 'from-red-900/40 to-green-950/40',
-    highlights: ['Euro 2016 champion', 'All-time top international scorer', 'Nations League winner'],
+    bgGradient: 'from-red-900/40 to-red-950/40',
+    highlights: ['Youth academy star', 'Nearly 500 youth goals', 'Discovered his genius'],
+  },
+  {
+    id: 'barcelona',
+    name: 'FC Barcelona',
+    years: '2004–2021',
+    matches: 778,
+    goals: 672,
+    assists: 303,
+    trophies: 35,
+    color: 'hsl(240 100% 35%)',
+    bgGradient: 'from-blue-900/40 to-red-950/40',
+    highlights: ['10x La Liga champion', '4x Champions League winner', '7x Ballon d\'Or at Barça'],
+  },
+  {
+    id: 'psg',
+    name: 'Paris Saint-Germain',
+    years: '2021–2023',
+    matches: 75,
+    goals: 32,
+    assists: 35,
+    trophies: 2,
+    color: 'hsl(220 100% 30%)',
+    bgGradient: 'from-blue-900/40 to-blue-950/40',
+    highlights: ['2x Ligue 1 champion', 'Playmaking excellence', 'World Cup glory while at PSG'],
+  },
+  {
+    id: 'miami',
+    name: 'Inter Miami',
+    years: '2023–Present',
+    matches: 39,
+    goals: 34,
+    assists: 18,
+    trophies: 2,
+    color: 'hsl(330 100% 50%)',
+    bgGradient: 'from-pink-900/40 to-pink-950/40',
+    highlights: ['Leagues Cup champion', 'MLS sensation', 'Spreading magic in America'],
+  },
+  {
+    id: 'argentina',
+    name: 'Argentina',
+    years: '2005–Present',
+    matches: 191,
+    goals: 112,
+    assists: 61,
+    trophies: 4,
+    color: 'hsl(200 100% 50%)',
+    bgGradient: 'from-sky-900/40 to-sky-950/40',
+    highlights: ['2022 World Cup winner', '2x Copa América champion', 'Finalissima winner'],
   },
 ];
 
 const TimelineSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [activeClub, setActiveClub] = useState<string>('real');
+  const [activeClub, setActiveClub] = useState<string>('barcelona');
 
   const activeClubData = clubs.find((c) => c.id === activeClub)!;
 
@@ -188,7 +164,7 @@ const TimelineSection = () => {
                 style={{ backgroundColor: `${activeClubData.color}20`, borderColor: activeClubData.color }}
               >
                 <span className="font-display text-2xl font-bold" style={{ color: activeClubData.color }}>
-                  7
+                  10
                 </span>
               </div>
             </div>

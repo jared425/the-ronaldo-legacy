@@ -5,20 +5,20 @@ import { Quote, Heart, Star, Flame } from 'lucide-react';
 
 const quotes = [
   {
-    text: "I don't have to show anything to anyone. There is nothing to prove.",
-    context: "On self-belief",
+    text: "I've never wanted to be better than anyone. I just want to be the best I can be.",
+    context: "On self-improvement",
   },
   {
-    text: "Your love makes me strong. Your hate makes me unstoppable.",
-    context: "On motivation",
+    text: "You have to fight to reach your dream. You have to sacrifice and work hard for it.",
+    context: "On dedication",
   },
   {
-    text: "Talent without working hard is nothing.",
-    context: "On work ethic",
+    text: "The day you think there is no improvements to be made is a sad one for any player.",
+    context: "On growth",
   },
   {
-    text: "I'm not a perfectionist, but I like to feel that things are done well.",
-    context: "On excellence",
+    text: "I am more worried about being a good person than being the best football player in the world.",
+    context: "On character",
   },
 ];
 
@@ -44,7 +44,7 @@ const LegacySection = () => {
           className="text-center mb-16"
         >
           <span className="font-display text-sm uppercase tracking-[0.3em] text-primary">
-            The GOAT. The Icon. The Inspiration.
+            The GOAT. The Magician. The Inspiration.
           </span>
           <h2 className="section-title text-4xl md:text-5xl lg:text-6xl mt-4">
             THE <span className="text-gradient-gold">LEGACY</span>
@@ -85,9 +85,9 @@ const LegacySection = () => {
           className="grid md:grid-cols-3 gap-8 mb-16"
         >
           {[
-            { icon: Flame, title: 'Discipline', description: 'First to arrive, last to leave. A relentless pursuit of perfection.' },
-            { icon: Heart, title: 'Passion', description: 'Playing every match like it\'s the final. Love for the beautiful game.' },
-            { icon: Star, title: 'Belief', description: 'Unwavering confidence that hard work conquers all obstacles.' },
+            { icon: Flame, title: 'Humility', description: 'Greatness without arrogance. Leading by example, not words.' },
+            { icon: Heart, title: 'Passion', description: 'Playing every match with the joy of a child. Pure love for the game.' },
+            { icon: Star, title: 'Magic', description: 'Making the impossible look effortless. The gift that inspires millions.' },
           ].map((value, index) => (
             <motion.div
               key={value.title}
@@ -122,13 +122,13 @@ const LegacySection = () => {
               animate={{ opacity: [0.8, 1, 0.8] }}
               transition={{ duration: 3, repeat: Infinity }}
             >
-              CR7
+              LEO
             </motion.div>
             
             <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
-              More than a footballer. A symbol of what human determination can achieve.
-              From the streets of Madeira to the pinnacle of world football, 
-              Cristiano Ronaldo's legacy transcends the sport itself.
+              More than a footballer. A symbol of what talent and humility can achieve together.
+              From the streets of Rosario to lifting the World Cup, 
+              Lionel Messi's legacy transcends the sport itself.
             </p>
 
             <div className="mt-8 flex items-center justify-center gap-2 text-primary">

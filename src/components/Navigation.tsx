@@ -47,7 +47,7 @@ const Navigation = () => {
               className="font-display text-2xl font-bold text-gradient-gold"
               whileHover={{ scale: 1.05 }}
             >
-              CR7
+              LEO
             </motion.a>
 
             {/* Desktop Navigation */}
