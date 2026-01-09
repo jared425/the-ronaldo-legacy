@@ -3,15 +3,14 @@ import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 
 const clubColors = [
-  { name: 'Sporting CP', color: 'hsl(145 80% 35%)', years: '2002-2003' },
-  { name: 'Manchester United', color: 'hsl(0 100% 45%)', years: '2003-2009' },
-  { name: 'Real Madrid', color: 'hsl(0 0% 95%)', years: '2009-2018' },
-  { name: 'Juventus', color: 'hsl(0 0% 90%)', years: '2018-2021' },
-  { name: 'Al Nassr', color: 'hsl(50 100% 50%)', years: '2023-Present' },
-  { name: 'Portugal', color: 'hsl(0 100% 40%)', years: '2003-Present' },
+  { name: "Newell's Old Boys", color: 'hsl(0 100% 40%)', years: '1995-2000' },
+  { name: 'FC Barcelona', color: 'hsl(240 100% 35%)', years: '2004-2021' },
+  { name: 'Paris Saint-Germain', color: 'hsl(220 100% 30%)', years: '2021-2023' },
+  { name: 'Inter Miami', color: 'hsl(330 100% 50%)', years: '2023-Present' },
+  { name: 'Argentina', color: 'hsl(200 100% 50%)', years: '2005-Present' },
 ];
 
-const Number7Section = () => {
+const Number10Section = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [activeIndex, setActiveIndex] = useState(0);
@@ -42,14 +41,14 @@ const Number7Section = () => {
               More Than a Number
             </span>
             <h2 className="section-title text-4xl md:text-5xl lg:text-6xl mt-4 mb-6">
-              THE <span className="text-gradient-gold">CR7</span> LEGACY
+              THE <span className="text-gradient-gold">LA PULGA</span> LEGACY
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              The number 7 became synonymous with greatness, worn by legends like
-              George Best, David Beckham, and Eric Cantona at Manchester United.
-              But Cristiano made it his own—transforming CR7 into a global brand
-              and a symbol of excellence.
+              The number 10 became synonymous with genius, worn by legends like
+              Diego Maradona and Pelé. But Lionel made it his own—becoming the
+              greatest playmaker and goalscorer to ever grace the beautiful game,
+              and forever changing what it means to wear the iconic number.
             </p>
 
             {/* Club list */}
@@ -67,9 +66,9 @@ const Number7Section = () => {
                 >
                   <div
                     className="w-8 h-8 rounded-full flex items-center justify-center font-display font-bold text-sm"
-                    style={{ backgroundColor: club.color, color: index === 2 || index === 3 ? '#000' : '#fff' }}
+                    style={{ backgroundColor: club.color, color: '#fff' }}
                   >
-                    7
+                    10
                   </div>
                   <div className="flex-1 text-left">
                     <span className="font-display text-foreground">{club.name}</span>
@@ -80,7 +79,7 @@ const Number7Section = () => {
             </div>
           </motion.div>
 
-          {/* Animated Number 7 */}
+          {/* Animated Number 10 */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -98,14 +97,14 @@ const Number7Section = () => {
               
               {/* Main number */}
               <motion.span
-                className="relative text-[250px] md:text-[350px] font-display font-bold leading-none"
+                className="relative text-[200px] md:text-[300px] font-display font-bold leading-none"
                 animate={{
                   color: activeClub.color,
                   textShadow: `0 0 80px ${activeClub.color}`,
                 }}
                 transition={{ duration: 0.5 }}
               >
-                7
+                10
               </motion.span>
 
               {/* Club name badge */}
@@ -158,4 +157,4 @@ const Number7Section = () => {
   );
 };
 
-export default Number7Section;
+export default Number10Section;

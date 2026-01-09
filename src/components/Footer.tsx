@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { Instagram, Twitter, Youtube, Facebook, Heart } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Instagram, href: 'https://instagram.com/cristiano', label: 'Instagram' },
-  { icon: Twitter, href: 'https://twitter.com/cristiano', label: 'Twitter' },
-  { icon: Youtube, href: 'https://youtube.com/@cristiano', label: 'YouTube' },
-  { icon: Facebook, href: 'https://facebook.com/cristiano', label: 'Facebook' },
+  { icon: Instagram, href: 'https://instagram.com/leomessi', label: 'Instagram' },
+  { icon: Twitter, href: 'https://twitter.com/leomessi', label: 'Twitter' },
+  { icon: Youtube, href: 'https://youtube.com/@leomessi', label: 'YouTube' },
+  { icon: Facebook, href: 'https://facebook.com/leomessi', label: 'Facebook' },
 ];
 
 const Footer = () => {
@@ -21,7 +21,7 @@ const Footer = () => {
             className="mb-8"
           >
             <span className="font-display text-5xl font-bold text-gradient-gold">
-              CR7
+              LEO
             </span>
             <p className="text-sm text-muted-foreground mt-2 font-display uppercase tracking-widest">
               The Legend Lives On
@@ -81,7 +81,7 @@ const Footer = () => {
               Made with <Heart className="w-4 h-4 text-accent fill-current" /> for the Greatest of All Time
             </p>
             <p className="mt-2">
-              © {new Date().getFullYear()} CR7 Tribute. This is a fan-made tribute site.
+              © {new Date().getFullYear()} Leo Messi Tribute. This is a fan-made tribute site.
             </p>
           </motion.div>
         </div>

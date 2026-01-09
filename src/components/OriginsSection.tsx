@@ -2,28 +2,28 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { MapPin, Calendar, Heart, Star } from 'lucide-react';
-import childhoodImage from '@/assets/childhood-ronaldo.jpg';
+import childhoodImage from '@/assets/childhood-messi.jpg';
 
 const milestones = [
   {
     icon: Calendar,
-    title: 'February 5, 1985',
-    description: 'Born in Santo António, Funchal, Madeira, Portugal',
+    title: 'June 24, 1987',
+    description: 'Born in Rosario, Santa Fe, Argentina',
   },
   {
     icon: Heart,
-    title: 'Humble Beginnings',
-    description: 'Grew up in a small tin-roofed home with his three siblings',
+    title: 'Fighting Against Odds',
+    description: 'Diagnosed with growth hormone deficiency at age 10',
   },
   {
     icon: Star,
-    title: 'Early Passion',
-    description: 'Started playing football at age 3, joined Andorinha at 8',
+    title: 'Early Prodigy',
+    description: 'Joined Newell\'s Old Boys at age 6, scored nearly 500 goals in youth',
   },
   {
     icon: MapPin,
-    title: 'Sporting CP Academy',
-    description: 'Left home at 12 to join Sporting Lisbon\'s youth academy',
+    title: 'La Masia Academy',
+    description: 'Moved to Barcelona at 13, club paid for his medical treatment',
   },
 ];
 
@@ -51,7 +51,7 @@ const OriginsSection = () => {
             <div className="relative rounded-2xl overflow-hidden">
               <img
                 src={childhoodImage}
-                alt="Young Ronaldo playing football"
+                alt="Young Messi playing football"
                 className="w-full aspect-square object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
@@ -64,10 +64,10 @@ const OriginsSection = () => {
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
                 <p className="text-sm text-muted-foreground">
-                  "I was never afraid to fail. I learned from every setback."
+                  "I start early, and I stay late, day after day, year after year."
                 </p>
                 <p className="text-xs text-primary mt-2 font-display uppercase tracking-wider">
-                  — Cristiano Ronaldo
+                  — Lionel Messi
                 </p>
               </motion.div>
             </div>
@@ -96,9 +96,9 @@ const OriginsSection = () => {
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              From the humble streets of Funchal, Madeira, a boy with an extraordinary dream
-              began his journey. Cristiano Ronaldo dos Santos Aveiro grew up in poverty,
-              but his talent and determination were destined to change football forever.
+              From the humble streets of Rosario, Argentina, a small boy with an extraordinary gift
+              began his journey. Lionel Andrés Messi overcame a growth hormone deficiency
+              and left his homeland at just 13 to pursue his dream—a dream that would change football forever.
             </p>
 
             {/* Milestones */}

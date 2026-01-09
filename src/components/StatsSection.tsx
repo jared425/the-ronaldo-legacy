@@ -12,14 +12,14 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-  { icon: Target, value: 925, label: 'Career Goals', description: 'Total goals scored across all competitions' },
-  { icon: Trophy, value: 35, label: 'Major Trophies', description: 'Club and international titles won' },
-  { icon: Flame, value: 1250, suffix: '+', label: 'Matches Played', description: 'Professional appearances' },
-  { icon: Crown, value: 5, label: 'Ballon d\'Or', description: 'FIFA World Player of the Year awards' },
-  { icon: Zap, value: 145, label: 'Hat-tricks', description: 'Three or more goals in a single match' },
-  { icon: Award, value: 4, label: 'Golden Boots', description: 'European top scorer awards' },
-  { icon: Globe, value: 135, label: 'International Goals', description: 'All-time top scorer for national team' },
-  { icon: Star, value: 140, label: 'UCL Goals', description: 'Champions League all-time top scorer' },
+  { icon: Target, value: 850, suffix: '+', label: 'Career Goals', description: 'Total goals scored across all competitions' },
+  { icon: Trophy, value: 45, label: 'Major Trophies', description: 'Club and international titles won' },
+  { icon: Flame, value: 1080, suffix: '+', label: 'Matches Played', description: 'Professional appearances' },
+  { icon: Crown, value: 8, label: 'Ballon d\'Or', description: 'Record-breaking World Player awards' },
+  { icon: Zap, value: 57, label: 'Hat-tricks', description: 'Three or more goals in a single match' },
+  { icon: Award, value: 6, label: 'Golden Boots', description: 'European top scorer awards' },
+  { icon: Globe, value: 112, label: 'International Goals', description: 'Argentina all-time top scorer' },
+  { icon: Star, value: 129, label: 'UCL Goals', description: 'Champions League all-time top scorer' },
 ];
 
 const AnimatedCounter = ({ value, suffix = '', isInView }: { value: number; suffix?: string; isInView: boolean }) => {
@@ -79,13 +79,13 @@ const StatsSection = () => {
           className="text-center mb-16"
         >
           <span className="font-display text-sm uppercase tracking-[0.3em] text-primary">
-            Numbers of a Superhuman
+            Numbers of a Genius
           </span>
           <h2 className="section-title text-4xl md:text-5xl lg:text-6xl mt-4">
             ALL-TIME <span className="text-gradient-gold">STATS</span>
           </h2>
           <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Records shattered, history written. The numbers that define an era of excellence.
+            Records shattered, history written. The numbers that define an era of magic.
           </p>
         </motion.div>
 
@@ -130,13 +130,13 @@ const StatsSection = () => {
         >
           <div className="inline-block card-premium p-8 md:p-12 rounded-2xl glow-gold">
             <p className="font-display text-sm uppercase tracking-[0.3em] text-primary mb-4">
-              Guinness World Record
+              Record 8 Ballon d'Or Awards
             </p>
             <div className="text-6xl md:text-8xl font-display font-bold text-gradient-gold animate-glow">
-              925+
+              8x GOAT
             </div>
             <p className="text-xl md:text-2xl text-foreground mt-4">
-              Career Goals – Most by any player in football history
+              Most Ballon d'Or wins in football history – Untouchable legacy
             </p>
           </div>
         </motion.div>

@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import OriginsSection from '@/components/OriginsSection';
 import TimelineSection from '@/components/TimelineSection';
 import StatsSection from '@/components/StatsSection';
-import Number7Section from '@/components/Number7Section';
+import Number10Section from '@/components/Number7Section';
 import TrophySection from '@/components/TrophySection';
 import CelebrationSection from '@/components/CelebrationSection';
 import LegacySection from '@/components/LegacySection';
@@ -37,7 +37,7 @@ const Index = () => {
           <OriginsSection />
           <TimelineSection />
           <StatsSection />
-          <Number7Section />
+          <Number10Section />
           <TrophySection />
           <CelebrationSection />
           <LegacySection />

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Trophy, Award, Crown, Star, Medal, Globe, LucideIcon } from 'lucide-react';
-import trophyImage from '@/assets/trophy-cabinet.jpg';
+import trophyImage from '@/assets/trophy-cabinet-messi.jpg';
 
 interface TrophyItem {
   icon: LucideIcon;
@@ -13,14 +13,14 @@ interface TrophyItem {
 }
 
 const trophies: TrophyItem[] = [
-  { icon: Trophy, name: 'Champions League', count: 5, category: 'club', description: 'UEFA Champions League titles' },
-  { icon: Medal, name: 'League Titles', count: 7, category: 'club', description: 'Premier League, La Liga, Serie A' },
-  { icon: Trophy, name: 'Domestic Cups', count: 6, category: 'club', description: 'FA Cup, Copa del Rey, and more' },
-  { icon: Globe, name: 'International', count: 2, category: 'club', description: 'Euro 2016, Nations League' },
-  { icon: Crown, name: 'Ballon d\'Or', count: 5, category: 'individual', description: 'World\'s best player awards' },
-  { icon: Award, name: 'Golden Boot', count: 4, category: 'individual', description: 'European top scorer awards' },
+  { icon: Trophy, name: 'Champions League', count: 4, category: 'club', description: 'UEFA Champions League titles' },
+  { icon: Medal, name: 'League Titles', count: 12, category: 'club', description: 'La Liga, Ligue 1, MLS' },
+  { icon: Trophy, name: 'Domestic Cups', count: 10, category: 'club', description: 'Copa del Rey, Coupe de France, and more' },
+  { icon: Globe, name: 'World Cup', count: 1, category: 'club', description: 'FIFA World Cup 2022 Champion' },
+  { icon: Crown, name: 'Ballon d\'Or', count: 8, category: 'individual', description: 'Record-breaking world\'s best player' },
+  { icon: Award, name: 'Golden Boot', count: 6, category: 'individual', description: 'European top scorer awards' },
   { icon: Star, name: 'FIFA Best', count: 3, category: 'individual', description: 'FIFA Player of the Year' },
-  { icon: Medal, name: 'UEFA Awards', count: 4, category: 'individual', description: 'Best Player in Europe' },
+  { icon: Medal, name: 'Copa América', count: 2, category: 'club', description: 'South American champion' },
 ];
 
 const TrophySection = () => {
@@ -70,7 +70,7 @@ const TrophySection = () => {
         >
           {[
             { key: 'all', label: 'All Trophies' },
-            { key: 'club', label: 'Club Trophies' },
+            { key: 'club', label: 'Team Trophies' },
             { key: 'individual', label: 'Individual Awards' },
           ].map((cat) => (
             <button
@@ -161,7 +161,7 @@ const TrophySection = () => {
             <Trophy className="w-12 h-12 text-primary" />
             <div className="text-left">
               <div className="text-5xl font-display font-bold text-gradient-gold">
-                35+
+                45+
               </div>
               <p className="text-muted-foreground">
                 Major trophies in career
